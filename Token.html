@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token - Green Rocket</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow-y: auto; /* Ermöglicht das vertikale Scrollen */
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding-left: 220px; /* Platz für die fixierten Buttons auf der linken Seite */
+            max-width: 800px;
+            margin-bottom: 100px; /* Platz am unteren Ende für Scrollen */
+        }
+
+        .button-container {
+            position: fixed;
+            left: 20px; /* Buttons sind jetzt links */
+            bottom: 375px; /* Platzierung weiter unten */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 2; /* Damit die Buttons immer im Vordergrund sind */
+        }
+
+        .button {
+            display: block;
+            padding: 15px 30px;
+            background-color: #f0f0f0;
+            border: 2px solid #008000;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .image {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            width: 100px;
+            height: auto;
+            z-index: 3;
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(45deg, #008000, #00cc00);
+            opacity: 0.5;
+            transform: skewY(-3deg);
+        }
+
+        .wave.top {
+            top: 0;
+            transform: skewY(-3deg) translateY(-50%);
+            z-index: -1; /* Damit die Wellen hinter dem Text bleiben */
+        }
+
+        .wave.bottom {
+            bottom: 0;
+            transform: skewY(3deg) translateY(50%);
+            z-index: -1; /* Damit die Wellen hinter dem Text bleiben */
+        }
+
+        .hidden-text {
+            display: none;
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+            z-index: 1; /* Damit der Text vor den Wellen erscheint */
+            max-height: 80vh; /* Begrenzt die maximale Höhe des Texts */
+            overflow-y: auto; /* Aktiviert das Scrollen im Textbereich */
+        }
+
+        .hidden-text p {
+            margin: 0 0 1rem 0;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        function showText(buttonId) {
+            // Alle Textbereiche ausblenden
+            const allTexts = document.querySelectorAll('.hidden-text');
+            allTexts.forEach(function(textElement) {
+                textElement.style.display = 'none';
+            });
+
+            // Den gewählten Text einblenden
+            const selectedText = document.getElementById(buttonId);
+            selectedText.style.display = 'block';
+            selectedText.classList.add('fade-in');
+        }
+    </script>
+</head>
+<body>
+    <div class="wave top"></div>
+    <div class="wave bottom"></div>
+
+    <img src="Logo weiß.png" alt="Logo" class="image">
+
+    <div class="container">
+        <!-- Container für die Buttons -->
+        <div class="button-container">
+            <a href="#" class="button" onclick="showText('hiddenText1')">Why Green Rocket?</a>
+            <a href="#" class="button" onclick="showText('hiddenText2')">Milestones</a>
+            <a href="#" class="button" onclick="showText('hiddenText3')">FAQ</a>
+        </div>
+
+        <!-- Hidden text for "Why Green Rocket" -->
+        <div id="hiddenText1" class="hidden-text">
+            <p><strong>Green Rocket: Get in, fly high and own the future!</strong></p>
+            <p><strong>Our Mission</strong><br>
+            You’re stuck in the rat race, searching for something higher. Then, out of the darkness, a spark appears – that spark is Green Rocket. Break free, unlock your potential, and leave the chains behind.<br>
+            Green Rocket is more than a crypto project – it’s a movement with a clear vision. While others focus on speculation, we aim for sustainable growth and long-term stability.</p>
+            <p><strong>Why Green Rocket?</strong></p>
+            <ul>
+                <li><strong>Sustainable growth:</strong> Green Rocket breaks through limits and soars higher and higher. We bought 200 million tokens ourselves because we believe in the project. We hold these tokens. As a result, there are only 800 million tokens in circulation.</li>
+                <li><strong>Long-term stability:</strong> Green Rocket is built from unbreakable steel to last for eternity. The launch via Moonshot is intended to prevent both rugpull and total loss.</li>
+                <li><strong>Transparency:</strong> We promise transparency across our website and our social media channels, ensuring trust and reliability. We are active on five social media platforms.</li>
+                <li><strong>Community:</strong> People from around the globe unite under a shared vision. Together, we’re shaping a new era! Our active community is growing and will rise to the sky with Green Rocket.</li>
+            </ul>
+            <p><strong>Get in the Green Rocket</strong><br>
+            Get in and feel the power of Green Rocket, rising higher and higher! The future is ours – and it starts now.<br>
+            <strong>Green Rocket – Your token. Your chance. Your rise.</strong></p>
+        </div>
+
+        <!-- Hidden text for "Milestones" -->
+        <div id="hiddenText2" class="hidden-text">
+            <p><strong>This page is updated regularly. It serves as a brief overview of our successful history.</strong></p>
+            <p><strong>17th of January 2025:</strong> Launch of the Green Rocket token via Moonshot.</p>
+        </div>
+
+        <!-- Hidden text for "FAQ" -->
+        <div id="hiddenText3" class="hidden-text">
+            <p><strong>1. What makes Green Rocket special compared to other projects?</strong></p>
+            <p>Green Rocket focuses on sustainable growth and long-term stability rather than short-term speculation. The launch via Moonshot is intended to rule out both rugpull and total loss. We can't rugpull the token even if we wanted to. We are also active on five social media platforms. Transparency is very important to us, so we pass on all important information to our community.</p>
+            <p><strong>2. How can I track the development of the Green Rocket token?</strong></p>
+            <p>You can view the current value of the token at any time on DEX Screener. Both in the app and on the browser. Updates, information and everything else can be found on our social media channels. Project milestones can be found on our website.</p>
+            <p><strong>3. How do you ensure the long-term stability of the token?</strong></p>
+            <p>Our active community is growing, which means that our project is becoming better known. As a result, more and more people are investing in our token. We have also bought 200 million tokens ourselves, leaving only 800 million tokens in circulation. We will hold these tokens because we believe in Green Rocket.</p>
+            <p><strong>4. How does the value of the token increase?</strong></p>
+            <p>The value of the token increases through supply and demand. The supply of the token is one billion tokens, of which only 800 million tokens are still in circulation after our purchase. As our community grows and awareness increases, so does demand and therefore the price.</p>
+            <p><strong>5. How much money should I invest?</strong></p>
+            <p>Basically, you should only invest as much money as you could bear to lose. We promise that we will do everything we can to prevent a loss. We also promise that we will do everything we can to make the Green Rocket Token rise to infinity.</p>
+            <p><strong>6. How do I invest in the Green Rocket Token?</strong></p>
+            <p>You need two apps. Firstly, a cryptocurrency exchange such as Bitpanda, Kraken, Coinbase or Binance. Here you register and verify your identity. You should carry out this process in peace and quiet and in a closed room, as this usually requires a video identification procedure and you have to write down your seed phrase. You can buy Solana on this cryptocurrency exchange. The Green Rocket token is based on this cryptocurrency. You then send your Solana to your Phantom Wallet after you have registered with Phantom. As soon as your Solana has arrived at Phantom, you simply exchange your Solana for the Green Rocket Token. Enter this token address: INSERT ADDRESS HERE AS SOON AS TOKEN IS LAUNCHED</p>
+            <p><strong>7. What payment methods are available?</strong></p>
+            <p>The payment methods depend on the cryptocurrency exchange where you buy Solana.</p>
+        </div>
+    </div>
+</body>
+</html>
