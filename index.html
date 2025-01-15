@@ -47,6 +47,24 @@
             background-color: #e0e0e0;
         }
 
+        .links {
+            margin-top: 1rem;
+            display: none;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .links a {
+            color: #008000;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
         .wave {
             position: absolute;
             width: 100%;
@@ -127,8 +145,28 @@
 
     <div class="center-content">
         <h2>Green Rocket Token</h2>
-        <button class="button" onclick="location.href='Token.html'">Visit website</button>
+        <button class="button" onclick="location.href='Token.html'">Website</button>
+        <button class="button" onclick="toggleLinks()">Links</button>
+
+        <div class="links" id="links">
+            <a href="https://www.instagram.com/green.rocket_official/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@green.rocket_official" target="_blank">Tiktok</a>
+            <a href="https://discord.gg/Q3fQCpMWtg" target="_blank">Discord</a>
+            <a href="https://x.com/_green_rocket" target="_blank">X</a>
+            <a href="https://t.me/+kSW9mvCVtl0zMGU6" target="_blank">Telegram</a>
+        </div>
     </div>
+
+    <script>
+        function toggleLinks() {
+            var links = document.getElementById('links');
+            if (links.style.display === "none" || links.style.display === "") {
+                links.style.display = "block";
+            } else {
+                links.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
 
