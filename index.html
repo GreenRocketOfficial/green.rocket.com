@@ -15,6 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Flexrichtung angepasst */
             height: 100vh;
             overflow: hidden;
             position: relative;
@@ -22,6 +23,7 @@
 
         .center-content {
             text-align: center;
+            padding: 1rem;
         }
 
         .center-content h2 {
@@ -66,10 +68,53 @@
 
         .logo {
             position: absolute;
-            top: 50px;
+            top: 10px;
             right: 10px;
-            width: 100px;
+            width: 80px; /* Größe des Logos reduziert */
             height: auto;
+        }
+
+        /* Media Queries für responsive Design */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* Vertikale Ausrichtung */
+                height: auto; /* Höhe an den Inhalt anpassen */
+                padding: 1rem;
+            }
+
+            .center-content h2 {
+                font-size: 1.8rem; /* Schriftgröße für kleinere Geräte */
+            }
+
+            .center-content .button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                width: 60px; /* Logo wird kleiner auf kleinen Bildschirmen */
+                top: 5px;
+                right: 5px;
+            }
+
+            .wave {
+                height: 100px; /* Wellen kleiner machen */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .center-content h2 {
+                font-size: 1.5rem; /* Noch kleinere Schriftgröße */
+            }
+
+            .center-content .button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.8rem;
+            }
+
+            .logo {
+                width: 50px;
+            }
         }
     </style>
 </head>
@@ -82,7 +127,7 @@
 
     <div class="center-content">
         <h2>Green Rocket Token</h2>
-        <button class="button" onclick="location.href='Token.html'">One Token - endless potential</button>
+        <button class="button" onclick="location.href='Token.html'">Visit website</button>
     </div>
 </body>
 </html>
