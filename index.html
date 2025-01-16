@@ -15,7 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Flexrichtung angepasst */
+            flex-direction: column;
             height: 100vh;
             overflow: hidden;
             position: relative;
@@ -24,6 +24,8 @@
         .center-content {
             text-align: center;
             padding: 1rem;
+            width: 100%;
+            max-width: 500px;
         }
 
         .center-content h2 {
@@ -41,6 +43,7 @@
             font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin: 0.5rem;
         }
 
         .center-content .button:hover {
@@ -88,20 +91,21 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 80px; /* Größe des Logos reduziert */
+            width: 80px;
             height: auto;
+            cursor: pointer;
         }
 
         /* Media Queries für responsive Design */
         @media (max-width: 768px) {
             body {
-                flex-direction: column; /* Vertikale Ausrichtung */
-                height: auto; /* Höhe an den Inhalt anpassen */
+                flex-direction: column;
+                height: auto;
                 padding: 1rem;
             }
 
             .center-content h2 {
-                font-size: 1.8rem; /* Schriftgröße für kleinere Geräte */
+                font-size: 1.8rem;
             }
 
             .center-content .button {
@@ -110,19 +114,19 @@
             }
 
             .logo {
-                width: 60px; /* Logo wird kleiner auf kleinen Bildschirmen */
+                width: 60px;
                 top: 5px;
                 right: 5px;
             }
 
             .wave {
-                height: 100px; /* Wellen kleiner machen */
+                height: 100px;
             }
         }
 
         @media (max-width: 480px) {
             .center-content h2 {
-                font-size: 1.5rem; /* Noch kleinere Schriftgröße */
+                font-size: 1.5rem;
             }
 
             .center-content .button {
@@ -141,7 +145,10 @@
     <div class="wave bottom"></div>
 
     <!-- Das Logo wird hier angezeigt -->
-    <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/master/Logo%20rund.png" alt="Logo" class="logo">
+    <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/master/Logo%20rund.png" 
+         alt="Logo" 
+         class="logo" 
+         onclick="location.reload()">
 
     <div class="center-content">
         <h2>Green Rocket Token</h2>
@@ -150,7 +157,7 @@
 
         <div class="links" id="links">
             <a href="https://www.instagram.com/green.rocket_official/" target="_blank">Instagram</a>
-            <a href="https://www.tiktok.com/@green.rocket_official" target="_blank">Tiktok</a>
+            <a href="https://www.tiktok.com/@green.rocket_official" target="_blank">TikTok</a>
             <a href="https://discord.gg/Q3fQCpMWtg" target="_blank">Discord</a>
             <a href="https://x.com/_green_rocket" target="_blank">X</a>
             <a href="https://t.me/+kSW9mvCVtl0zMGU6" target="_blank">Telegram</a>
