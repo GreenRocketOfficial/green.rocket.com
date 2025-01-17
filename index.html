@@ -68,6 +68,27 @@
             text-decoration: underline;
         }
 
+        .token-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .token-field {
+            background-color: #f0f0f0;
+            border: 2px solid #008000;
+            border-radius: 5px;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            color: #333;
+            text-align: center;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         .wave {
             position: absolute;
             width: 100%;
@@ -162,6 +183,15 @@
             <a href="https://x.com/_green_rocket" target="_blank">X</a>
             <a href="https://t.me/green_rocket_official" target="_blank">Telegram</a>
         </div>
+
+        <!-- Feld für Token Adresse -->
+        <div class="token-container">
+            <div class="token-field" 
+                 onclick="copyToClipboard('4AyAok9Hk5hs2yvzo2jrPMMhTW9A1HmQYLcwvnd6moon')" 
+                 title="Klicken zum Kopieren">
+                4AyAo...moon
+            </div>
+        </div>
     </div>
 
     <script>
@@ -172,6 +202,12 @@
             } else {
                 links.style.display = "none";
             }
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Adresse kopiert: " + text);
+            });
         }
     </script>
 </body>
