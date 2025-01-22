@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Rocket - Homepage</title>
-    <!-- Favicon hinzufügen -->
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/master/Logo%20rund.png">
 
     <style>
@@ -25,68 +24,51 @@
             text-align: center;
             padding: 1rem;
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
         }
 
         .center-content h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #008000;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .center-content .button {
             background-color: #f0f0f0;
             color: #000000;
             border: 2px solid #008000;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            font-size: 1rem;
+            padding: 1.5rem 3rem;
+            border-radius: 8px;
+            font-size: 1.5rem;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin: 0.5rem;
+            margin: 1rem 0;
         }
 
         .center-content .button:hover {
             background-color: #e0e0e0;
         }
 
-        .links {
-            margin-top: 1rem;
-            display: none;
-            text-align: left;
-            font-size: 1rem;
-        }
-
-        .links a {
-            color: #008000;
-            text-decoration: none;
-            display: block;
-            margin: 0.5rem 0;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
         .token-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         .token-field {
             background-color: #f0f0f0;
             border: 2px solid #008000;
-            border-radius: 5px;
-            padding: 0.8rem 1rem;
-            font-size: 1rem;
+            border-radius: 8px;
+            padding: 1.2rem 2rem;
+            font-size: 1.5rem;
             color: #333;
             text-align: center;
             cursor: pointer;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        .token-field:hover {
+            background-color: #e0e0e0;
         }
 
         .wave {
@@ -117,27 +99,23 @@
             cursor: pointer;
         }
 
-        /* Media Queries für responsive Design */
         @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-                height: auto;
-                padding: 1rem;
-            }
-
             .center-content h2 {
-                font-size: 1.8rem;
+                font-size: 2.5rem;
             }
 
             .center-content .button {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
+                padding: 1.2rem 2rem;
+                font-size: 1.2rem;
+            }
+
+            .token-field {
+                padding: 1rem 1.5rem;
+                font-size: 1.2rem;
             }
 
             .logo {
                 width: 60px;
-                top: 5px;
-                right: 5px;
             }
 
             .wave {
@@ -147,12 +125,17 @@
 
         @media (max-width: 480px) {
             .center-content h2 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
             .center-content .button {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.8rem;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .token-field {
+                padding: 0.8rem 1rem;
+                font-size: 1rem;
             }
 
             .logo {
@@ -165,7 +148,6 @@
     <div class="wave top"></div>
     <div class="wave bottom"></div>
 
-    <!-- Das Logo wird hier angezeigt -->
     <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/master/Logo%20rund.png" 
          alt="Logo" 
          class="logo" 
@@ -173,37 +155,21 @@
 
     <div class="center-content">
         <h2>Green Rocket Token</h2>
-        <button class="button" onclick="location.href='Token.html'">Website</button>
-        <button class="button" onclick="toggleLinks()">Links</button>
-
-        <div class="links" id="links">
-            <a href="https://www.instagram.com/green.rocket_official/" target="_blank">Instagram</a>
-            <a href="https://www.tiktok.com/@green.rocket_official" target="_blank">TikTok</a>
-            <a href="https://discord.gg/Q3fQCpMWtg" target="_blank">Discord</a>
-            <a href="https://x.com/_green_rocket" target="_blank">X</a>
-            <a href="https://t.me/green_rocket_official" target="_blank">Telegram</a>
-        </div>
-
-        <!-- Feld für Token Adresse -->
+        
+        <!-- Copy Token Address Button -->
         <div class="token-container">
             <div class="token-field" 
                  onclick="copyToClipboard('4AyAok9Hk5hs2yvzo2jrPMMhTW9A1HmQYLcwvnd6moon')" 
                  title="Klicken zum Kopieren">
-                4AyAo...moon
+                Copy token address
             </div>
         </div>
+
+        <!-- Learn More About Us Button -->
+        <button class="button" onclick="location.href='Token.html'">Learn more about us</button>
     </div>
 
     <script>
-        function toggleLinks() {
-            var links = document.getElementById('links');
-            if (links.style.display === "none" || links.style.display === "") {
-                links.style.display = "block";
-            } else {
-                links.style.display = "none";
-            }
-        }
-
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
                 alert("Adresse kopiert: " + text);
