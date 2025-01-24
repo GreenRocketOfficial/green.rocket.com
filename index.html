@@ -98,10 +98,30 @@
 
         .logo {
             position: relative;
-            margin-bottom: 30px; /* Leicht nach unten verschoben */
-            width: 120px; /* Größe erhöht */
+            margin-bottom: 10px; /* Noch näher an den Text verschoben */
+            margin-top: 10px;
+            width: 120px;
             height: auto;
             cursor: pointer;
+        }
+
+        .social-media-logos {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px; /* Noch näher an das Green Rocket Logo verschoben */
+        }
+
+        .social-media-logos img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .social-media-logos img:hover {
+            transform: scale(1.1);
         }
 
         @media (max-width: 768px) {
@@ -125,11 +145,16 @@
 
             .logo {
                 width: 100px;
-                margin-bottom: 25px; /* Abstand auf kleineren Bildschirmen angepasst */
+                margin-bottom: 25px;
             }
 
             .wave {
                 height: 100px;
+            }
+
+            .social-media-logos img {
+                width: 40px;
+                height: 40px;
             }
         }
 
@@ -153,8 +178,13 @@
             }
 
             .logo {
-                width: 80px; /* Kleiner auf sehr kleinen Bildschirmen */
+                width: 80px;
                 margin-bottom: 20px;
+            }
+
+            .social-media-logos img {
+                width: 35px;
+                height: 35px;
             }
         }
     </style>
@@ -163,7 +193,29 @@
     <div class="wave top"></div>
     <div class="wave bottom"></div>
 
-    <!-- Logo zentriert -->
+    <!-- Social Media Logos -->
+    <div class="social-media-logos">
+        <a href="https://www.instagram.com/green.rocket_official/" target="_blank">
+            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/Instagram%20Logo.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@green.rocket_official" target="_blank">
+            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/TikTok%20Logo.png" alt="TikTok">
+        </a>
+        <a href="https://x.com/_green_rocket" target="_blank">
+            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/X%20Logo.png" alt="X">
+        </a>
+        <a href="https://t.me/greenrocket_community_chat" target="_blank">
+            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/Telegram%20Logo.png" alt="Telegram">
+        </a>
+        <a href="https://discord.com/invite/Q3fQCpMWtg" target="_blank">
+            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/Discord%20Logo.png" alt="Discord">
+        </a>
+        <a href="mailto:green.rocket_official@proton.me" target="_blank">
+            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/Proton%20mail%20Logo.png" alt="ProtonMail">
+        </a>
+    </div>
+
+    <!-- Green Rocket Logo -->
     <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/master/Logo%20rund.png" 
          alt="Logo" 
          class="logo" 
@@ -195,5 +247,3 @@
     </script>
 </body>
 </html>
-
-
