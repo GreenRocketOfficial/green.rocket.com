@@ -103,6 +103,111 @@
             cursor: pointer;
         }
 
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Rocket</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/master/Logo%20rund.png">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .button {
+            padding: 20px;
+            font-size: 1.5rem;
+            background-color: #008000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #006400;
+            transform: translateY(-3px);
+        }
+
+        .button:active {
+            transform: translateY(1px);
+        }
+
+        .hidden-text {
+            display: none;
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            max-height: 300px;
+        }
+
+        .hidden-text.active {
+            display: block;
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(45deg, #008000, #00cc00);
+            opacity: 0.5;
+            transform: skewY(-3deg);
+        }
+
+        .wave.top {
+            top: 0;
+            transform: skewY(-3deg) translateY(-50%);
+        }
+
+        .wave.bottom {
+            bottom: 0;
+            transform: skewY(3deg) translateY(50%);
+        }
+
+        .image {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 80px;
+            height: auto;
+            cursor: pointer;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -167,12 +272,10 @@
         <!-- Hidden Text Sections -->
 <div id="Our vision" class="hidden-text">
             <h2>Our vision</h2>
-            <p><strong>Our vision</strong></p>
             <p>We are building a world where financial freedom is for everyone. With the Green Rocket Token, you can pay anywhere, independent of banks and governments. Our decentralized, inflation-proof currency is the key to a bright future.</p>
         </div>
 <div id="Our strengths" class="hidden-text">
             <h2>Our strenghts</h2>
-            <p><strong>Our strenghts</strong></p>
             <p>The Green Rocket Token has a fixed supply of one billion tokens. Unlike traditional currencies, the token cannot be reprinted, which prevents inflation.</p>
             <p>We have a long-term vision instead of speculating on short-term hype.</p>
             <p>The Green Rocket Token offers maximum flexibility. You can buy and sell whenever you want, without having to enter into contracts.</p>
@@ -197,31 +300,22 @@
         </div>
 <div id="Our rise" class="hidden-text">
             <h2>Our rise</h2>
-			<p><strong>Our rise</strong></p>
+			<p><strong>Milestones</strong></p>
             <p>17th of January 2025: Launch</p>
 			<p><strong>Roadmap Q1 2025</strong></p>
-			<p><strong>First influencer collaboration post</strong></p>
-			<p>We will start with the first advertising posts to generate some attention.</p>
-			<p><strong>VIP Club for our Top Holders</strong></p>
-			<p>We want to make it even more attractive to invest in the Green Rocket Token and hold it for the long term.</p>
-			<p><strong>Green Rocket Challenge</strong></p>
-			<p>We want to involve and reward our community.</p>
-			<p><strong>Video Challenge</strong></p>
-			<p>We want to reward the creativity of our community.</p>
-			<p><strong>Listing on CoinGecko and CoinMarketCap</strong></p>
-			<p>We would like to attract even more investors.</p>
-			<p><strong>Collaborations with crypto podcasts and YouTube channels</strong></p>
-			<p>We want to increase our awareness.</p>
-			<p><strong>Road to 100k market capitalization</strong></p>
-			<p>February 1st: $12k market capitalization and 15 holders</p>
-			<p>March 1st: $22k market capitalization and 50 holders</p>
-			<p>April 1st: $50k market capitalization and 100 holders</p>
-			<p>May 1st: $85k market capitalization and 190 holders</p>
-			<p>June 1st: $100k market capitalization and 250 holders</p>
+			<p>Establish cooperations</p>
+			<p>You would like to cooperate with us?</p>
+			<p>Contact us by e-mail: <a href="mailto:green.rocket_official@proton.me" target="_blank" style="color: #008000; text-decoration: none;"> 
+	    green.rocket_official@proton.me 
+	</a></p>
+			<p>VIP Club for our top holders</p>
+			<p>Community Challenges</p>
+			<p>Listing on CoinGecko and CoinMarketCap</p>
+			<p>$40k market capitalization</p>
+			<p>75 holders</p>
         </div>
 <div id="Frequently Asked Questions" class="hidden-text">
             <h2>Frequently Asked Questions</h2>
-			<p><strong>Frequently Asked Questions</strong></p>
             <p><strong>1. What is the Green Rocket Token?</strong></p>
             <p>The Green Rocket Token is a cryptocurrency on the solana blockchain with a fixed supply of one billion tokens. It was developed to create a decentralized currency.</p>
 			<p><strong>2. How do I buy Green Rocket Tokens?</strong></p>
@@ -259,11 +353,9 @@
         Discord (General Chat)
     </a>.
 </p>
-			<p><strong>4. How much money should I invest?</strong></p>
-			<p>An amount between $100 and $500 would be a good start. You can secure a significant share of the Green Rocket Token without taking too much risk.</p>
 			<p><strong>Any more questions?</strong></p>
 			<p>
-    Contact us directly via 
+    Contact us via 
     <a href="https://t.me/greenrocket_community_chat" target="_blank" style="color: #008000; text-decoration: none;">
         Telegram
     </a> or 
@@ -271,9 +363,10 @@
         Discord
     </a>.
 </p>
-			<p>Get in, fly high and own the future!</p>
+			<p><strong>Get in, fly high and own the future!</strong></p>
 			<p>Join our community, invest in the Green Rocket Token and shape a decentralized future with us.</p>
         </div>
     </div>
 </body>
 </html>
+
