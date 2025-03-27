@@ -24,56 +24,52 @@
             padding: 1rem;
             width: 100%;
             max-width: 600px;
+            position: relative;
         }
 
-        .center-content h2 {
-            font-size: 3rem;
+        .center-content h2,
+        .center-content h3 {
+            font-size: 3.5rem;
             color: #008000;
-            margin-bottom: 1.5rem;
+            margin: 0;
+            line-height: 0.8;
+        }
+
+        .center-content h2:nth-of-type(1) {
+            margin-bottom: 10px;
+        }
+
+        .center-content h2:nth-of-type(2) {
+            margin-bottom: 10px;
         }
 
         .center-content h3 {
-            font-size: 1.8rem;
-            color: #008000;
-            margin-bottom: 2rem;
+            margin-bottom: 20px; /* Mehr Abstand vor dem Button */
         }
 
-        .center-content .button {
+        .button {
             background-color: #f0f0f0;
             color: #000000;
             border: 2px solid #008000;
-            padding: 1.5rem 3rem;
+            padding: 1rem 2rem;
             border-radius: 8px;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin: 1rem 0;
+            font-family: Arial, sans-serif;
+            margin-top: 20px; /* Button weiter nach unten verschoben */
         }
 
-        .center-content .button:hover {
+        .button:hover {
             background-color: #e0e0e0;
         }
 
-        .token-container {
-            margin-top: 2rem;
-        }
-
-        .token-field {
-            background-color: #f0f0f0;
-            border: 2px solid #008000;
-            border-radius: 8px;
-            padding: 1.2rem 2rem;
-            font-size: 1.5rem;
-            color: #333;
-            text-align: center;
+        .logo {
+            position: relative;
+            margin-top: -60px; /* Logo bleibt weiter oben */
+            width: 240px;
+            height: auto;
             cursor: pointer;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .token-field:hover {
-            background-color: #e0e0e0;
         }
 
         .wave {
@@ -94,155 +90,24 @@
             bottom: 0;
             transform: skewY(3deg) translateY(50%);
         }
-
-        .logo {
-            position: relative;
-            margin: 30px 0 -20px 0; /* Ganz nah am Text darunter */
-            width: 120px;
-            height: auto;
-        }
-
-        .social-media-logos {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: -10px; /* Gleicher Abstand wie das Logo zum Text darunter */
-        }
-
-        .social-media-logos img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .social-media-logos img:hover {
-            transform: scale(1.1);
-        }
-
-        @media (max-width: 768px) {
-            .center-content h2 {
-                font-size: 2.5rem;
-            }
-
-            .center-content h3 {
-                font-size: 1.5rem;
-            }
-
-            .center-content .button {
-                padding: 1.2rem 2rem;
-                font-size: 1.2rem;
-            }
-
-            .token-field {
-                padding: 1rem 1.5rem;
-                font-size: 1.2rem;
-            }
-
-            .logo {
-                width: 100px;
-                margin-bottom: 15px;
-            }
-
-            .wave {
-                height: 100px;
-            }
-
-            .social-media-logos img {
-                width: 40px;
-                height: 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .center-content h2 {
-                font-size: 2rem;
-            }
-
-            .center-content h3 {
-                font-size: 1.2rem;
-            }
-
-            .center-content .button {
-                padding: 1rem 1.5rem;
-                font-size: 1rem;
-            }
-
-            .token-field {
-                padding: 0.8rem 1rem;
-                font-size: 1rem;
-            }
-
-            .logo {
-                width: 80px;
-                margin-bottom: 10px;
-            }
-
-            .social-media-logos img {
-                width: 35px;
-                height: 35px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="wave top"></div>
     <div class="wave bottom"></div>
 
-    <!-- Social Media Logos -->
-    <div class="social-media-logos">
-        <a href="https://www.instagram.com/green.rocket_official/" target="_blank">
-            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/Instagram%20Logo.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/@green.rocket_official" target="_blank">
-            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/TikTok%20Logo.png" alt="TikTok">
-        </a>
-        <a href="https://x.com/_green_rocket" target="_blank">
-            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/X%20Logo.png" alt="X">
-        </a>
-        <a href="https://t.me/greenrocket_community_chat" target="_blank">
-            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/Telegram%20Logo.png" alt="Telegram">
-        </a>
-        <a href="https://discord.com/invite/Q3fQCpMWtg" target="_blank">
-            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/Discord%20Logo.png" alt="Discord">
-        </a>
-        <a href="mailto:green.rocket_official@proton.me" target="_blank">
-            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/15973269574f311d5b806950cf43362e94048d2d/Proton%20mail%20Logo.png" alt="ProtonMail">
-        </a>
-        <a href="https://dexscreener.com/solana/gcuqc5vffpbishdh8bhsiznvlqjhwlgbbam9vipn7m2t" target="_blank">
-            <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/master/DEX%20Screener%20Logo.png" alt="DEX Screener">
-        </a>
-    </div>
-
     <!-- Green Rocket Logo -->
     <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png" 
          alt="Logo" 
-         class="logo">
+         class="logo" 
+         onclick="location.href='Token.html'">
 
     <div class="center-content">
-        <h2>Green Rocket Token</h2>
-        <h3>Get in, fly high and own the future!</h3>
+        <h2>Bet</h2>
+        <h2>Better</h2>
+        <h3>Green Rocket</h3>
         
-        <!-- Copy Token Address Button -->
-        <div class="token-container">
-            <div class="token-field" 
-                 onclick="copyToClipboard('4AyAok9Hk5hs2yvzo2jrPMMhTW9A1HmQYLcwvnd6moon')" 
-                 title="Klicken zum Kopieren">
-                Copy token address
-            </div>
-        </div>
-
-        <!-- Learn More About Us Button -->
-        <button class="button" onclick="location.href='Token.html'">Learn more about us</button>
+        <button class="button" onclick="location.href='Token.html'">Erfahre mehr über uns</button>
     </div>
-
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert("Adresse kopiert: " + text);
-            });
-        }
-    </script>
 </body>
 </html>
