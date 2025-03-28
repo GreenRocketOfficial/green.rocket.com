@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Rocket - Homepage</title>
+    <title>Deine Statistik - Green Rocket</title>
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png">
     <style>
         body {
@@ -17,7 +17,7 @@
             height: 100vh;
             overflow: hidden;
             position: relative;
-            margin-top: 80px; /* Noch weiter nach unten verschoben */
+            margin-top: 80px; /* Verschiebung nach unten */
         }
 
         .center-content {
@@ -69,9 +69,19 @@
         .logo {
             position: relative;
             margin-top: -60px;
-            width: 180px; /* Logo etwas kleiner gemacht */
+            width: 180px; /* Logo etwas kleiner */
             height: auto;
             cursor: pointer;
+        }
+
+        .input-field {
+            padding: 1rem;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            border: 2px solid #008000;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 300px;
         }
 
         .wave {
@@ -104,15 +114,32 @@
          onclick="location.href='Über uns.html'">
 
     <div class="center-content">
-        <h2>Bet</h2>
-        <h2>Better</h2>
-        <h3>Green Rocket</h3>
-        
-        <button class="button" onclick="location.href='Willkommen.html'">Herzlich Willkommen</button>
-        <button class="button" onclick="location.href='Über uns.html'">Erfahre mehr über uns</button>
-        
-        <!-- Neuer Button "Deine Statistik" unter den bestehenden -->
-        <button class="button" onclick="location.href='Deine_Statistik.html'">Deine Statistik</button>
+        <h2>Deine Statistik</h2>
+
+        <!-- Suchformular für Personalnummer -->
+        <input type="text" class="input-field" id="personalnummer" placeholder="Gib deine Personalnummer ein">
+
+        <button class="button" onclick="zeigeStatistik()">Statistik anzeigen</button>
+
+        <!-- Link zur Excel-Datei -->
+        <div id="statistikLink" style="display: none; margin-top: 20px;">
+            <p>Hier ist deine Statistik:</p>
+            <a href="path/to/deine_statistik.xlsx" class="button" download>Statistik herunterladen</a>
+        </div>
     </div>
+
+    <script>
+        function zeigeStatistik() {
+            var personalnummer = document.getElementById("personalnummer").value;
+
+            // Überprüfen, ob eine Personalnummer eingegeben wurde
+            if (personalnummer) {
+                // Zeigt den Link zur Excel-Datei an
+                document.getElementById("statistikLink").style.display = "block";
+            } else {
+                alert("Bitte gib eine Personalnummer ein.");
+            }
+        }
+    </script>
 </body>
 </html>
