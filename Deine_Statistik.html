@@ -17,7 +17,7 @@
             height: 100vh;
             overflow: hidden;
             position: relative;
-            margin-top: 80px; /* Verschiebung nach unten */
+            margin-top: 80px;
         }
 
         .center-content {
@@ -69,7 +69,7 @@
         .logo {
             position: relative;
             margin-top: -60px;
-            width: 180px; /* Logo etwas kleiner */
+            width: 180px;
             height: auto;
             cursor: pointer;
         }
@@ -125,17 +125,37 @@
         <!-- Link zur Excel-Datei -->
         <div id="statistikLink" style="display: none; margin-top: 20px;">
             <p>Hier ist deine Statistik:</p>
-            <a href="path/to/deine_statistik.xlsx" class="button" download>Statistik herunterladen</a>
+            <a id="downloadLink" class="button" download>Statistik herunterladen</a>
         </div>
     </div>
 
     <script>
         function zeigeStatistik() {
             var personalnummer = document.getElementById("personalnummer").value;
+            var downloadLink = document.getElementById("downloadLink");
 
             // Überprüfen, ob eine Personalnummer eingegeben wurde
             if (personalnummer) {
-                // Zeigt den Link zur Excel-Datei an
+                // Überprüfen, welche Personalnummer eingegeben wurde und den richtigen Link setzen
+                switch (personalnummer.toUpperCase()) {
+                    case 'DE001':
+                        downloadLink.href = 'path/to/DE001.xlsx';
+                        break;
+                    case 'DE002':
+                        downloadLink.href = 'path/to/DE002.xlsx';
+                        break;
+                    case 'DE003':
+                        downloadLink.href = 'path/to/DE003.xlsx';
+                        break;
+                    case 'DE004':
+                        downloadLink.href = 'path/to/DE004.xlsx';
+                        break;
+                    default:
+                        alert("Ungültige Personalnummer. Bitte versuche es erneut.");
+                        return;
+                }
+
+                // Den Link zur Excel-Datei anzeigen
                 document.getElementById("statistikLink").style.display = "block";
             } else {
                 alert("Bitte gib eine Personalnummer ein.");
