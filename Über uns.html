@@ -103,111 +103,6 @@
             cursor: pointer;
         }
 
-       <!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Rocket</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png">
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
-            position: relative;
-            overflow-y: auto;
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 400px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .button {
-            padding: 20px;
-            font-size: 1.5rem;
-            background-color: #008000;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .button:hover {
-            background-color: #006400;
-            transform: translateY(-3px);
-        }
-
-        .button:active {
-            transform: translateY(1px);
-        }
-
-        .hidden-text {
-            display: none;
-            text-align: left;
-            margin: 20px auto;
-            max-width: 600px;
-            font-size: 1rem;
-            color: #333;
-            line-height: 1.6;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            max-height: 300px;
-        }
-
-        .hidden-text.active {
-            display: block;
-        }
-
-        .wave {
-            position: absolute;
-            width: 100%;
-            height: 150px;
-            background: linear-gradient(45deg, #008000, #00cc00);
-            opacity: 0.5;
-            transform: skewY(-3deg);
-        }
-
-        .wave.top {
-            top: 0;
-            transform: skewY(-3deg) translateY(-50%);
-        }
-
-        .wave.bottom {
-            bottom: 0;
-            transform: skewY(3deg) translateY(50%);
-        }
-
-        .image {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 80px;
-            height: auto;
-            cursor: pointer;
-        }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -222,7 +117,7 @@
         }
     </style>
     <script>
-        const allSections = ['Unsere Vision', 'Unsere Stärken', 'Unser Aufstieg', 'Häufig gestellte Fragen'];
+        const allSections = ['Unsere Vision', 'Unsere Stärken', 'Unser Aufstieg', 'Häufig gestellte Fragen', 'Wusstest du schon ...'];
 
         function showText(sectionId) {
             // Alle Texte ausblenden
@@ -267,24 +162,23 @@
     <div class="container">
         <!-- Buttons -->
         <div class="button-container"></div>
-        </div>
+    </div>
 
-        <!-- Hidden Text Sections -->
-<div id="Unsere Vision" class="hidden-text">
-            <h2>Unsere Vision</h2>
-            <p>Bei Green Rocket haben wir eine klare Vision: Wir wollen ein Netzwerk von 100 Divisionen aufbauen, die gemeinsam einen jährlichen Umsatz von über einer Million Euro erzielen. Dies ist nur der Anfang eines großen Erfolges, und du kannst ein Teil davon sein!</p>
+    <!-- Hidden Text Sections -->
+    <div id="Unsere Vision" class="hidden-text">
+        <h2>Unsere Vision</h2>
+            <p>Bei Green Rocket haben wir eine klare Vision: Wir wollen ein Netzwerk von 100 Divisionen aufbauen, die gemeinsam einen jährlichen Umsatz von über einer Million Euro erzielen.</p>
         </div>
-<div id="Unsere Stärken" class="hidden-text">
-            <h2>Unsere Stärken</h2>
-            <p>Green Rocket bietet dir eine einzigartige Gelegenheit, Sportwetten zu genießen, ohne ein Risiko einzugehen oder einen Cent zu investieren. Unser Konzept ermöglicht es dir, mit Freunden zusammen zu wetten, während du gleichzeitig die Chance hast, echtes Geld zu gewinnen.</p>
-            <p>Dein Divisionsleiter steht dir zur Seite und entwickelt mit dir eine maßgeschneiderte Strategie, die sowohl Spaß macht als auch erfolgreich ist.</p>
-            <p>Jeder Division werden 2.002 € Startkapital zur Verfügung gestellt, mit dem garantiert 20 Wetten gesetzt werden können.</p>
-            <p>Du kannst also völlig ohne eigenes Risiko mit deinen Freunden wetten und hast wöchentlich die Chance, bis zu 1.000 € zu gewinnen.</p>
-            <p>Was hält dich noch davon ab, ein Teil von Green Rocket zu werden? Schließ dich uns an und erlebe, wie viel Spaß und Erfolg Sportwetten bringen können – ganz ohne finanzielle Belastung!</p>
-        </div>
-<div id="Unser Aufstieg" class="hidden-text">
-            <h2>Unser Aufstieg</h2>
-			<p>Green Rocket hat bereits in kurzer Zeit beachtliche Erfolge erzielt. Wir haben uns stetig weiterentwickelt und sind auf einem klaren Wachstumskurs.</p>
+    <div id="Unsere Stärken" class="hidden-text">
+        <h2>Unsere Stärken</h2>
+        <p>Mit Green Rocket kannst Sportwetten mit deinen Freunden genießen, ohne einen Cent zu investieren.</p>
+            <p>Dein Divisionsleiter entwickelt mit dir eine maßgeschneiderte Strategie, die Spaß macht und erfolgreich ist.</p>
+            <p>Du kannst also ohne Risiko mit deinen Freunden wetten und hast wöchentlich die Chance, Geld zu gewinnen.</p>
+            <p>Was hält dich noch davon ab, ein Teil von Green Rocket zu werden? Schließ dich uns an und erlebe, wie viel Spaß und Erfolg Sportwetten bringen können – ganz ohne Verlustrisiko!</p>
+    </div>
+    <div id="Unser Aufstieg" class="hidden-text">
+        <h2>Unser Aufstieg</h2>
+        <p>Green Rocket hat bereits beachtliche Erfolge erzielt. Wir wachsen immer weiter.</p>
 			<p><strong>Meilensteine</strong></p>
             <p>28. Februar 2023: Gründung von Green Rocket</p>
 			<p>22. März 2024: Größter Gewinn: 2.458,64 €</p>
@@ -295,27 +189,37 @@
 			<p><strong>Unsere Roadmap für 2025</strong></p>
 			<p>Expansion: Einführung einer zweiten Division</p>
 			<p>Umsatz: Ziel 20.000 €</p>
-        </div>
-<div id="Häufig gestellte Fragen" class="hidden-text">
-            <h2>Häufig gestellte Fragen</h2>
+    </div>
+    <div id="Häufig gestellte Fragen" class="hidden-text">
+        <h2>Häufig gestellte Fragen</h2>
             <p><strong>Wie sind die Scheine aufgebaut?</strong></p>
-            <p>Wir setzen auf 4/8 Systemwetten mit einem Einsatz von 100,10 €. Die Mindestquote für die Tipps beträgt 2,75. Die Scheine werden freitags erstellt, und der Zeitraum für die Tipps ist von Freitag 18 Uhr bis Donnerstag 23 Uhr.</p>
+            <p>Wir machen 4/8 Systemwetten mit einem Einsatz von 100,10 €.</p>
 			<p><strong>Welche Kosten entstehen mir?</strong></p>
-			<p>Bei Green Rocket entstehen dir keine Kosten! Du kannst mit uns wetten und gewinnen, ohne einen Cent zu investieren.</p>
+			<p>Bei Green Rocket zahlst du keinen Cent.</p>
 			<p><strong>Wie bekomme ich mein Geld?</strong></p>
-			<p>Dein Gewinnanteil wird dir direkt von deinem Divisionsleiter über PayPal ausgezahlt.</p>
+			<p>Dein Gewinnanteil wird dir von deinem Divisionsleiter über PayPal ausgezahlt.</p>
 			<p><strong>Wie viel Geld kann ich bei Green Rocket verdienen?</strong></p>
-			<p>Du erhältst 2,5% Gewinnbeteiligung für jeden Tipp, der auf einem Schein landet. Da du jede Woche vier Tipps abgibst, kannst du bis zu 10% Gewinnbeteiligung pro Woche erzielen. Der maximale Gewinn variiert je nach Quoten, liegt aber in der Regel bei etwa 1.000 € pro Woche.</p>
+			<p>Du kannst jede Woche bis zu 10% Gewinnbeteiligung erhalten.</p>
 		    <p><strong>Ist Green Rocket legal?</strong></p>
-			<p>Ja, unser Modell ist vollkommen legal. Jede Woche setzt eine Person den Schein und verteilt den Gewinn an vier weitere Personen.</p>
+			<p>Ja, Green Rocket ist legal.</p>
 			<p><strong>Kann eine Division geschlossen werden?</strong></p>
-			<p>Ja, jede Division hat ein Startkapital, das für 20 Scheine ausreicht. Sollte eine Division nach 20 Scheinen weiterhin Verluste schreiben, kann der Geschäftsführer entscheiden, sie zu schließen.</p>
+			<p>Ja. Wenn eine Division nach 20 Scheinen im Minus bleibt, wird sie geschlossen.</p>
 			<p><strong>Sind noch Fragen offen?</strong></p>
-			<p>Wenn du weitere Fragen hast, wende dich gerne an deinen Divisionsleiter
-    <a href="mailto:green.rocket_official@proton.me" target="_blank" style="color: #008000; text-decoration: none;"></p>
-	        <p>oder kontaktiere uns direkt per Mail.<p>
-        </div>
+            <p>Wenn du weitere Fragen hast, wende dich gerne an deinen Divisionsleiter oder <a href="mailto:green.rocket_official@proton.me">kontaktiere uns direkt per Mail.</a></p>
+    </div>
+
+    <div id="Wusstest du schon ..." class="hidden-text">
+        <h2>Wusstest du schon ...</h2>
+        <p><strong>woher unser Name kommt?</strong></p>
+        <p>„Green“ steht für Gewinne und Erfolge. „Rocket“ symbolisiert unseren unaufhaltsamen Aufstieg – wir durchbrechen alle Limits und fliegen über jede Grenze hinaus!</p>
+        <p><strong>dass wir einen eigenen Song haben?</strong></p>
+        <p>Hol dir den Green Rocket-Sound und spüre die Energie! <a href="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/master/Green%20Rocket%20Song.mp3" download="Green Rocket Song.mp3">Hier</a> kannst du ihn herunterladen.</p>
+        <p><strong>was unser Logo für eine Bedeutung hat?</strong></p>
+        <p>Unser Logo zeigt Green Rocket, umgeben von einem Kreis – dem Symbol für all die Grenzen, die uns von außen gesetzt werden. Doch wir lassen uns nicht aufhalten: Green Rocket durchbricht jede Barriere und setzt neue Maßstäbe!</p>
+        <p><strong>wie du Green Rocket immer griffbereit haben kannst?</strong></p>
+        <p>Füge einfach den <a href="https://greenrocketofficial.github.io/green.rocket.com/" target="_blank">Link zu unserer Homepage</a> zu deinem Home-Bildschirm hinzu!</p>
+        <p><strong>dass wir einzigartig und konkurrenzlos sind?</strong></p>
+        <p>Green Rocket ist eine echte Innovation – unser Konzept gibt es kein zweites Mal auf dem Markt. Wir sind die Ersten, die risikolose Sportwetten anbieten!</p>
     </div>
 </body>
 </html>
-
