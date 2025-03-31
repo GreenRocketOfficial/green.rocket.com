@@ -120,11 +120,10 @@
         <!-- Suchformular für Personalnummer -->
         <input type="text" class="input-field" id="personalnummer" placeholder="Gib deine Personalnummer ein">
 
-        <button class="button" onclick="zeigeStatistik()">Statistik anzeigen</button>
+        <button class="button" onclick="zeigeStatistik()">Zur Statistik</button>
 
         <!-- Link zur Excel-Datei -->
         <div id="statistikLink" style="display: none; margin-top: 20px;">
-            <p>Hier ist deine Statistik:</p>
             <a id="downloadLink" class="button" download>Statistik herunterladen</a>
         </div>
     </div>
@@ -149,6 +148,9 @@
                         break;
                     case 'DE004':
                         downloadLink.href = 'https://github.com/GreenRocketOfficial/green.rocket.com/raw/master/DE004.xlsm';
+                        break;
+					case 'DE-DIV01':
+                        downloadLink.href = 'https://github.com/GreenRocketOfficial/green.rocket.com/raw/master/DE-DIV01.xlsm';
                         break;
                     default:
                         alert("Ungültige Personalnummer. Bitte versuche es erneut.");
