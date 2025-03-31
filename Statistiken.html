@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deine Statistik - Green Rocket</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        .center-content {
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .center-content h2,
+        .center-content h3 {
+            font-size: 3.5rem;
+            color: #008000;
+            margin: 0;
+            line-height: 0.8;
+        }
+
+        .center-content h2:nth-of-type(1) {
+            margin-bottom: 10px;
+        }
+
+        .center-content h2:nth-of-type(2) {
+            margin-bottom: 10px;
+        }
+
+        .center-content h3 {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #f0f0f0;
+            color: #000000;
+            border: 2px solid #008000;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .logo {
+            position: relative;
+            margin-top: -60px;
+            width: 180px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .input-field {
+            padding: 1rem;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            border: 2px solid #008000;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(45deg, #008000, #00cc00);
+            opacity: 0.5;
+            transform: skewY(-3deg);
+        }
+
+        .wave.top {
+            top: 0;
+            transform: skewY(-3deg) translateY(-50%);
+        }
+
+        .wave.bottom {
+            bottom: 0;
+            transform: skewY(3deg) translateY(50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="wave top"></div>
+    <div class="wave bottom"></div>
+
+    <!-- Logo mit immer weitergeleitet zu index.html -->
+    <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png" 
+         alt="Logo" 
+         class="logo" 
+         onclick="location.href='index.html'">
+
+    <div class="center-content">
+        <h2>Statistiken</h2>
+
+        <!-- Suchformular für Personalnummer -->
+        <input type="text" class="input-field" id="personalnummer" placeholder="Gib deine Personalnummer ein">
+
+        <button class="button" onclick="zeigeStatistik()">Zur Statistik</button>
+
+        <!-- Link zur Excel-Datei -->
+        <div id="statistikLink" style="display: none; margin-top: 20px;">
+            <a id="downloadLink" class="button" download>Statistik herunterladen</a>
+        </div>
+    </div>
+
+    <script>
+        function zeigeStatistik() {
+            var personalnummer = document.getElementById("personalnummer").value;
+            var downloadLink = document.getElementById("downloadLink");
+
+            // Überprüfen, ob eine Personalnummer eingegeben wurde
+            if (personalnummer) {
+                // Überprüfen, welche Personalnummer eingegeben wurde und den richtigen Link setzen
+                switch (personalnummer.toUpperCase()) {
+                    case 'DE001':
+                        downloadLink.href = 'https://github.com/GreenRocketOfficial/green.rocket.com/raw/master/DE001.xlsm';
+                        break;
+                    case 'DE002':
+                        downloadLink.href = 'https://github.com/GreenRocketOfficial/green.rocket.com/raw/master/DE002.xlsm';
+                        break;
+                    case 'DE003':
+                        downloadLink.href = 'https://github.com/GreenRocketOfficial/green.rocket.com/raw/master/DE003.xlsm';
+                        break;
+                    case 'DE004':
+                        downloadLink.href = 'https://github.com/GreenRocketOfficial/green.rocket.com/raw/master/DE004.xlsm';
+                        break;
+					case 'DE-DIV01':
+                        downloadLink.href = 'https://github.com/GreenRocketOfficial/green.rocket.com/raw/master/DE-DIV01.xlsm';
+                        break;
+                    default:
+                        alert("Ungültige Personalnummer. Bitte versuche es erneut.");
+                        return;
+                }
+
+                // Den Link zur Excel-Datei anzeigen
+                document.getElementById("statistikLink").style.display = "block";
+            } else {
+                alert("Bitte gib eine Personalnummer ein.");
+            }
+        }
+    </script>
+</body>
+</html>
