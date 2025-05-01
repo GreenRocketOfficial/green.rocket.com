@@ -1,50 +1,227 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipps abgeben</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffffff;
-            color: #008000;
-            margin: 0;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 2.5rem;
-        }
-        p {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            color: #000000;
-        }
-        a {
-            font-size: 1.5rem;
-            color: #008000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .logo {
-            width: 200px;
-            height: auto;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tipps abgeben</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    #danke {
+      display: none;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #e6ffe6;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 4px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .tipp-section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .tipp-section h3 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Klicke auf das Logo, um Tipps abzugeben.</h1>
-    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__gFDWIlUQjNTMlM4QTBDVkNHSzVZSVc1WlZYV09YSC4u" target="_blank">
-        <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png" alt="Green Rocket Logo" class="logo">
-    </a>
-    <p>Danke, dass du ein Teil von Green Rocket bist!</p>
-	<a href="index.html" class="button">Zurück zur Startseite</a>
+
+  <h1>Tipps abgeben</h1>
+
+  <form id="tippForm">
+    <label for="personalnummer">Personalnummer:</label>
+    <input list="personalnummern" id="personalnummer" name="Personalnummer" required />
+
+    <!-- Tipp 1 -->
+    <div class="tipp-section">
+      <h3>Tipp 1</h3>
+      <label>Sportart:</label>
+      <input list="sportarten" name="Tipp 1 - Sportart" required />
+
+      <label>Liga:</label>
+      <input list="ligen" name="Tipp 1 - Liga" required />
+
+      <label>Spiel:</label>
+      <input type="text" name="Tipp 1 - Spiel" required />
+
+      <label>Tipp:</label>
+      <input list="tipps" name="Tipp 1 - Tipp" required />
+    </div>
+
+    <!-- Tipp 2 -->
+    <div class="tipp-section">
+      <h3>Tipp 2</h3>
+      <label>Sportart:</label>
+      <input list="sportarten" name="Tipp 2 - Sportart" required />
+
+      <label>Liga:</label>
+      <input list="ligen" name="Tipp 2 - Liga" required />
+
+      <label>Spiel:</label>
+      <input type="text" name="Tipp 2 - Spiel" required />
+
+      <label>Tipp:</label>
+      <input list="tipps" name="Tipp 2 - Tipp" required />
+    </div>
+
+    <!-- Tipp 3 -->
+    <div class="tipp-section">
+      <h3>Tipp 3</h3>
+      <label>Sportart:</label>
+      <input list="sportarten" name="Tipp 3 - Sportart" required />
+
+      <label>Liga:</label>
+      <input list="ligen" name="Tipp 3 - Liga" required />
+
+      <label>Spiel:</label>
+      <input type="text" name="Tipp 3 - Spiel" required />
+
+      <label>Tipp:</label>
+      <input list="tipps" name="Tipp 3 - Tipp" required />
+    </div>
+
+    <!-- Tipp 4 -->
+    <div class="tipp-section">
+      <h3>Tipp 4</h3>
+      <label>Sportart:</label>
+      <input list="sportarten" name="Tipp 4 - Sportart" required />
+
+      <label>Liga:</label>
+      <input list="ligen" name="Tipp 4 - Liga" required />
+
+      <label>Spiel:</label>
+      <input type="text" name="Tipp 4 - Spiel" required />
+
+      <label>Tipp:</label>
+      <input list="tipps" name="Tipp 4 - Tipp" required />
+    </div>
+
+    <label for="bemerkung">Bemerkung (optional):</label>
+    <textarea id="bemerkung" name="Bemerkung" rows="3"></textarea>
+
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <button type="submit">Absenden</button>
+  </form>
+
+  <div id="danke">Danke! Deine Tipps sind bei uns eingegangen. Du kannst diese Seite nun schließen.</div>
+
+  <!-- DATALISTS -->
+  <datalist id="personalnummern">
+    <option value="DE001"><option value="DE002"><option value="DE003"><option value="DE004"><option value="DE005">
+    <option value="DE006"><option value="DE007"><option value="DE008"><option value="DE009"><option value="DE010">
+    <option value="DE011"><option value="DE012">
+  </datalist>
+
+  <datalist id="sportarten">
+    <option value="American Football"><option value="Baseball"><option value="Basketball"><option value="Dart">
+    <option value="Eishockey"><option value="Fußball"><option value="Rugby"><option value="Tennis">
+  </datalist>
+
+  <datalist id="ligen">
+    <option value="Ägypten 1"><option value="Algerien 1"><option value="Argentinien 1"><option value="Argentinien 2">
+    <option value="Aserbaidschan 1"><option value="Australien"><option value="BBL"><option value="Belarus 1">
+    <option value="Belgien 1"><option value="Belgien 2"><option value="Brasilien 1"><option value="Brasilien 2">
+    <option value="Brasilien 3"><option value="Bolivien"><option value="Bosnien 1"><option value="Bulgarien 1">
+    <option value="Champions League"><option value="Conference League"><option value="Chile 1"><option value="China 1">
+    <option value="China 2"><option value="Costa Rica 1"><option value="Dänemark 1"><option value="Dänemark 2">
+    <option value="Dart"><option value="DEL"><option value="Deutschland 1"><option value="Deutschland 2">
+    <option value="Deutschland 3"><option value="Ecuador 1"><option value="England 1"><option value="England 2">
+    <option value="England 3"><option value="England 4"><option value="Europa League"><option value="Finnland 1">
+    <option value="Frankreich 1"><option value="Frankreich 2"><option value="Frankreich 3"><option value="Griechenland">
+    <option value="Griechenland 1"><option value="Frauen Einzel"><option value="Herren Einzel"><option value="Irland 1">
+    <option value="Irland 2"><option value="Island 1"><option value="Israel 1"><option value="Italien 1">
+    <option value="Italien 2"><option value="Italien 3"><option value="Japan 1"><option value="Japan 2">
+    <option value="Kanada 1"><option value="Kenia 1"><option value="Kolumbien 1"><option value="Kroatien 1">
+    <option value="Länderspiel"><option value="Länderspiel Frauen"><option value="Landespokal"><option value="Malta 1">
+    <option value="Marokko 1"><option value="Mexiko 1"><option value="Mexiko 2"><option value="MLB">
+    <option value="NBA"><option value="NFL"><option value="NHL"><option value="Niederlande 1">
+    <option value="Niederlande 2"><option value="Norwegen 1"><option value="Norwegen 2"><option value="NRL">
+    <option value="Österreich 1"><option value="Österreich 2"><option value="Paraguay 1"><option value="Peru 1">
+    <option value="Polen 1"><option value="Polen 2"><option value="Portugal 1"><option value="Portugal 2">
+    <option value="Rugby League"><option value="Rumänien 1"><option value="Saudi-Arabien 1"><option value="Schottland 1">
+    <option value="Schottland 2"><option value="Schweden"><option value="Schweden 1"><option value="Schweden 2">
+    <option value="Schweden 3"><option value="Schweiz 1"><option value="Spanien 1"><option value="Spanien 2">
+    <option value="Spanien 3"><option value="Südafrika 1"><option value="Super League"><option value="Slowenien 1">
+    <option value="Südkorea 1"><option value="Tschechien"><option value="Tschechien 1"><option value="Türkei 1">
+    <option value="Türkei 2"><option value="Thailand 1"><option value="Tunesien 1"><option value="U19 Länderspiel">
+    <option value="U21 Länderspiel"><option value="USA 1"><option value="Ukraine 1"><option value="Ungarn 1">
+    <option value="Uruguay 1"><option value="WNBA"><option value="Zypern 1">
+  </datalist>
+
+  <datalist id="tipps">
+    <option value="Unentschieden"><option value="Sieg (1)"><option value="Sieg (2)"><option value="Torschütze">
+    <option value="Handicap 0:1 (1)"><option value="Handicap 1:0 (2)"><option value="1. Drittel Sieg (1)">
+    <option value="1. Drittel Sieg (2)"><option value="1. Halbzeit Sieg (1)"><option value="1. Halbzeit Sieg (2)">
+    <option value="2. Halbzeit Sieg (1)"><option value="2. Halbzeit Sieg (2)"><option value="1. Viertel Sieg (1)">
+    <option value="1. Viertel Sieg (2)">
+  </datalist>
+
+  <script>
+    document.getElementById('tippForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch('https://formspree.io/f/xzzrepgg', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('danke').style.display = 'block';
+        } else {
+          alert('Fehler beim Absenden. Bitte versuche es später erneut.');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('Es ist ein Netzwerkfehler aufgetreten.');
+      }
+    });
+  </script>
+
 </body>
 </html>
+
