@@ -195,56 +195,21 @@
     <option value="1. Viertel Sieg (2)">
   </datalist>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script>
-  const SUPABASE_URL = 'https://gjtphgymwfieswzbqvnj.supabase.co';
-  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdqdHBoZ3ltd2ZpZXN3emJxdm5qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYxOTYzNTIsImV4cCI6MjA2MTc3MjM1Mn0.8vTUAKvKTstcGO4FAbvdUj5n5bYDKPSfrfwqMHA37uo';
-
-  // Supabase richtig initialisieren (nicht denselben Namen verwenden!)
-  const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
   document.getElementById('tippForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
 
-    const eintrag = {
-      personalnummer: formData.get('Personalnummer'),
-      tipp1_sportart: formData.get('Tipp 1 - Sportart'),
-      tipp1_liga: formData.get('Tipp 1 - Liga'),
-      tipp1_spiel: formData.get('Tipp 1 - Spiel'),
-      tipp1_tipp: formData.get('Tipp 1 - Tipp'),
-
-      tipp2_sportart: formData.get('Tipp 2 - Sportart'),
-      tipp2_liga: formData.get('Tipp 2 - Liga'),
-      tipp2_spiel: formData.get('Tipp 2 - Spiel'),
-      tipp2_tipp: formData.get('Tipp 2 - Tipp'),
-
-      tipp3_sportart: formData.get('Tipp 3 - Sportart'),
-      tipp3_liga: formData.get('Tipp 3 - Liga'),
-      tipp3_spiel: formData.get('Tipp 3 - Spiel'),
-      tipp3_tipp: formData.get('Tipp 3 - Tipp'),
-
-      tipp4_sportart: formData.get('Tipp 4 - Sportart'),
-      tipp4_liga: formData.get('Tipp 4 - Liga'),
-      tipp4_spiel: formData.get('Tipp 4 - Spiel'),
-      tipp4_tipp: formData.get('Tipp 4 - Tipp'),
-
-      bemerkung: formData.get('Bemerkung')
-    };
-
     try {
-      const { data, error } = await supabaseClient.from('tipps').insert([eintrag]);
-      console.log('INSERT Ergebnis:', { data, error });
-
       const mailResponse = await fetch('https://formspree.io/f/xzzrepgg', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       });
 
-      if (error || !mailResponse.ok) {
-        throw new Error(error?.message || 'Mailversand fehlgeschlagen');
+      if (!mailResponse.ok) {
+        throw new Error('Mailversand fehlgeschlagen');
       }
 
       form.style.display = 'none';
@@ -259,4 +224,3 @@
 
 </body>
 </html>
-
