@@ -17,13 +17,12 @@
             font-family: Arial, sans-serif;
             background-color: #00BF63;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* nach oben ausrichten */
             align-items: center;
             flex-direction: column;
             height: 100vh;
             overflow: hidden;
             position: relative;
-            margin-top: 80px;
         }
 
         .center-content {
@@ -32,20 +31,16 @@
             width: 100%;
             max-width: 600px;
             position: relative;
-            margin-top: 20px;
+            padding-top: 20px; /* steuert den Abstand nach oben */
         }
 
         .center-content h2,
         .center-content h3 {
-            font-size: 4rem; /* größer & einheitlich */
-            color: black; /* Textfarbe schwarz */
+            font-size: 1.8rem; /* klein */
+            color: black;
             margin: 0;
             line-height: 1.1;
-        }
-
-        .center-content h2,
-        .center-content h3 {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .button-container {
@@ -57,7 +52,7 @@
 
         .button {
             background-color: #00BF63;
-            color: black; /* Schwarzer Text */
+            color: black;
             border: 2px solid #00BF63;
             padding: 1rem 2rem;
             border-radius: 8px;
@@ -73,7 +68,7 @@
 
         .logo {
             position: relative;
-            margin-top: -60px;
+            margin-top: 10px; /* Logo näher an den oberen Rand */
             width: 180px;
             height: auto;
         }
