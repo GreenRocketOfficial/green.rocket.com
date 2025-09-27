@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisionsrangliste</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #00BF63;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: black;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .coming-soon {
+            font-size: 2rem;
+            color: black;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(45deg, #00BF63, #00BF63);
+            opacity: 0.5;
+            transform: skewY(-3deg);
+        }
+
+        .wave.top {
+            top: 0;
+            transform: skewY(-3deg) translateY(-50%);
+        }
+
+        .wave.bottom {
+            bottom: 0;
+            transform: skewY(3deg) translateY(50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="wave top"></div>
+    <div class="wave bottom"></div>
+
+    <h1>Divisionsrangliste</h1>
+
+    <img src="https://raw.githubusercontent.com/GreenRocketOfficial/green.rocket.com/d68cd4626e577291de8be53a613f301cef25b178/Green%20Rocket%20Logo.png" 
+         alt="Logo" 
+         class="logo">
+
+    <div class="coming-soon">Ab 01.01.2026</div>
+</body>
+</html>
